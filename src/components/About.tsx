@@ -1,89 +1,114 @@
 
-import { Card } from "@/components/ui/card";
+import { Users, ShoppingBag, Award, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Store, Download, Users } from "lucide-react";
 
 export const About = () => {
   return (
-    <section id="quienes-somos" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="quienes-somos" className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-6">
-            ¿Quiénes Somos?
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Quiénes Somos
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            En FerreArt nos especializamos en traer productos importados de la más alta calidad. 
-            Desde tecnología de vanguardia hasta accesorios para el hogar, ofrecemos una experiencia única de compra.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
+            FerreArt es tu socio confiable en productos importados de calidad premium. 
+            Ofrecemos dos modalidades de compra para adaptarnos a tus necesidades.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Compra Minorista */}
-          <Card className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShoppingCart className="w-8 h-8 text-white" />
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+              Nuestra Misión
+            </h3>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed font-light">
+              Conectamos a nuestros clientes con productos importados de la más alta calidad, 
+              desde tecnología de vanguardia hasta artículos para el hogar que transforman tu vida cotidiana.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed font-light">
+              Con años de experiencia en importación, garantizamos productos auténticos, 
+              precios competitivos y un servicio excepcional.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">500+</div>
+                  <div className="text-blue-100 font-light">Productos</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">1000+</div>
+                  <div className="text-blue-100 font-light">Clientes</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">5</div>
+                  <div className="text-blue-100 font-light">Años</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">98%</div>
+                  <div className="text-blue-100 font-light">Satisfacción</div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Compra Minorista
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Accede a nuestro catálogo completo con precios de venta al público. 
-                Productos únicos y de calidad premium para tu hogar o negocio.
-              </p>
-              <Button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                Ver Productos
-              </Button>
             </div>
-          </Card>
-
-          {/* Revendedor */}
-          <Card className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Store className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Ser Revendedor
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Registrate como revendedor y accede a precios especiales, 
-                catálogos descargables y herramientas exclusivas para hacer crecer tu negocio.
-              </p>
-              <Button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                Ser Revendedor
-              </Button>
-            </div>
-          </Card>
+          </div>
         </div>
 
-        {/* Beneficios del Portal de Revendedores */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
-          <h3 className="text-3xl font-bold text-center mb-8">
-            Portal para Comerciantes
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
+        {/* Modalidades de compra */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                <ShoppingBag className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="text-xl font-semibold mb-2">Precios Especiales</h4>
-              <p className="text-gray-300">Accede a lista de precios mayorista con descuentos exclusivos</p>
+              <h3 className="text-2xl font-bold text-gray-900">Compra Minorista</h3>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-white" />
+            <p className="text-gray-600 mb-6 leading-relaxed font-light">
+              Perfecto para compras personales. Accede a nuestro catálogo completo con precios especiales para consumidor final.
+            </p>
+            <ul className="space-y-3 text-gray-600">
+              <li className="flex items-center">
+                <Award className="w-5 h-5 text-blue-500 mr-3" />
+                <span className="font-light">Precios competitivos</span>
+              </li>
+              <li className="flex items-center">
+                <Award className="w-5 h-5 text-blue-500 mr-3" />
+                <span className="font-light">Envío a todo el país</span>
+              </li>
+              <li className="flex items-center">
+                <Award className="w-5 h-5 text-blue-500 mr-3" />
+                <span className="font-light">Garantía en todos los productos</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 shadow-lg border border-purple-100">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                <Users className="w-6 h-6 text-purple-600" />
               </div>
-              <h4 className="text-xl font-semibold mb-2">Catálogos Descargables</h4>
-              <p className="text-gray-300">Descarga catálogos actualizados para mostrar a tus clientes</p>
+              <h3 className="text-2xl font-bold text-gray-900">Portal Revendedor</h3>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Store className="w-6 h-6 text-white" />
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Herramientas de Venta</h4>
-              <p className="text-gray-300">Acceso a materiales promocionales y soporte comercial</p>
-            </div>
+            <p className="text-gray-600 mb-6 leading-relaxed font-light">
+              ¿Querés emprender o expandir tu negocio? Registrate y accedé a nuestro portal exclusivo para comerciantes.
+            </p>
+            <ul className="space-y-3 text-gray-600 mb-6">
+              <li className="flex items-center">
+                <Award className="w-5 h-5 text-purple-500 mr-3" />
+                <span className="font-light">Precios mayoristas especiales</span>
+              </li>
+              <li className="flex items-center">
+                <Download className="w-5 h-5 text-purple-500 mr-3" />
+                <span className="font-light">Catálogo descargable para clientes</span>
+              </li>
+              <li className="flex items-center">
+                <Award className="w-5 h-5 text-purple-500 mr-3" />
+                <span className="font-light">Soporte comercial dedicado</span>
+              </li>
+            </ul>
+            <Button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white w-full font-medium">
+              Registrarse como Revendedor
+            </Button>
           </div>
         </div>
       </div>
