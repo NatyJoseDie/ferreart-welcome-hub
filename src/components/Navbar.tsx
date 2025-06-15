@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,12 +23,12 @@ export const Navbar = () => {
 
           {/* Navegación desktop */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Inicio
-            </a>
-            <a href="#quienes-somos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            </Link>
+            <Link to="/dashboard" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Quiénes Somos
-            </a>
+            </Link>
             <a href="#como-comprar" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Cómo Comprar
             </a>
@@ -65,12 +66,12 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-4">
-              <a href="#inicio" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium">
                 Inicio
-              </a>
-              <a href="#quienes-somos" className="text-gray-700 hover:text-blue-600 font-medium">
+              </Link>
+              <Link to="/dashboard" className="text-gray-700 hover:text-blue-600 font-medium">
                 Quiénes Somos
-              </a>
+              </Link>
               <a href="#como-comprar" className="text-gray-700 hover:text-blue-600 font-medium">
                 Cómo Comprar
               </a>
