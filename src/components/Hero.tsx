@@ -4,8 +4,17 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
-      {/* Background decorative elements */}
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+      {/* Imagen de fondo con overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
+        }}
+      ></div>
+      
+      {/* Elementos decorativos */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
@@ -24,7 +33,11 @@ export const Hero = () => {
             <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
               Explorar Categorías
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white bg-white/10 text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            >
               Conoce Más
             </Button>
           </div>
