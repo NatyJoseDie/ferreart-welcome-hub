@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Store, Download, Users } from "lucide-react";
+import { ShoppingCart, Store, Download, Users, CheckCircle } from "lucide-react";
 
 export const About = () => {
   return (
@@ -9,11 +9,41 @@ export const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-6">
-            ¿Quiénes Somos?
+            Quiénes Somos – Distribuidora FerreArt
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            En FerreArt nos especializamos en traer productos importados de la más alta calidad. 
-            Desde tecnología de vanguardia hasta accesorios para el hogar, ofrecemos una experiencia única de compra.
+          <div className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed space-y-4">
+            <p>
+              En Distribuidora FerreArt somos una empresa dedicada a la comercialización y distribución de artículos de ferretería, hogar y electrodomésticos.
+            </p>
+            <p>
+              Desde nuestros inicios, nos enfocamos en ofrecer productos de calidad, precios competitivos y una atención personalizada, tanto a clientes minoristas como mayoristas.
+            </p>
+            <p>
+              Trabajamos con marcas líderes del mercado y contamos con un catálogo en constante crecimiento, adaptado a las necesidades de cada cliente.
+            </p>
+            <p className="font-semibold text-gray-800">
+              Nuestro objetivo es ser tu socio confiable para que cada proyecto, obra o reparación cuente con los materiales adecuados, al mejor precio y en el momento justo.
+            </p>
+          </div>
+          
+          {/* Valores */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-12 mb-8">
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-6 h-6 text-green-500" />
+              <span className="text-lg font-semibold text-gray-800">Compromiso</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-6 h-6 text-green-500" />
+              <span className="text-lg font-semibold text-gray-800">Agilidad</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-6 h-6 text-green-500" />
+              <span className="text-lg font-semibold text-gray-800">Confianza</span>
+            </div>
+          </div>
+          
+          <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            ¡Gracias por elegirnos!
           </p>
         </div>
 
@@ -57,7 +87,7 @@ export const About = () => {
           </Card>
         </div>
 
-        {/* Beneficios del Portal de Revendedores */}
+        {/* Portal para Comerciantes */}
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
           <h3 className="text-3xl font-bold text-center mb-8">
             Portal para Comerciantes
