@@ -1,15 +1,16 @@
 
 
+
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
-      {/* Imagen de fondo con overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden pt-0">
+      {/* Imagen de fondo con overlay que llega hasta arriba */}
+      <div className="absolute inset-0 top-0 bg-black/40"></div>
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 top-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
         }}
@@ -51,4 +52,5 @@ export const Hero = () => {
     </section>
   );
 };
+
 
