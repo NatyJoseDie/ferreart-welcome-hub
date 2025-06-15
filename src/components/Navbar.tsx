@@ -1,40 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY && window.scrollY > 100) {
-          // Scrolling down and past 100px
-          setIsVisible(false);
-        } else {
-          // Scrolling up
-          setIsVisible(true);
-        }
-        setLastScrollY(window.scrollY);
-      }
-    };
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
-
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-transform duration-300 ${
-      isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo y nombre */}
